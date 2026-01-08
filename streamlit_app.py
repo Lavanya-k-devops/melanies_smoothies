@@ -1,9 +1,11 @@
 # Import python packages
 
+
 import streamlit as st
 import sys
-st.write("Python version:", sys.version)
-
+import requests
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+st.text(smoothiefroot_response)
 cnx = st.connection("snowflake")
 st.success("Snowflake connection OK ✅")
 
