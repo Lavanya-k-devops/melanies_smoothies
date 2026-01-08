@@ -1,5 +1,11 @@
 # Import python packages
+
 import streamlit as st
+import sys
+st.write("Python version:", sys.version)
+
+cnx = st.connection("snowflake")
+st.success("Snowflake connection OK ✅")
 
 from snowflake.snowpark.functions import col
 
